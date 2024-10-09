@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: #e3dede;
+        margin: 0;
+        padding: 0;
+        font-family: monospace;
+      }
+      .container {
+        background-color: transparent;
+        text-align: center;
+        width: 200px;
+        height: 200px;
+        border-radius: 10px;
+        margin-left: auto;
+        margin-right: auto;
+        position: fixed;
+        top: 136px;
+        left: 540px;
+      }
+
+      @media (max-width: 768px) {
+        .container {
+          top: 136px;
+          left: 90px;
+        }
+      }
+
+      .btn-container {
+        background-color: transparent;
+        position: relative;
+        top: 80px;
+        height: 50px;
+      }
+      button {
+        margin-top: 5px;
+        height: 40px;
+        width: 90px;
+        color: beige;
+        font-weight: bold;
+        background-color: #ff0606;
+        border: 2px solid black;
+        border-radius: 8px;
+        box-sizing: border-box;
+        box-shadow: 5px 5px 1px black;
+        transition: 0.2s linear;
+      }
+      button:hover {
+        background-color: #e87910;
+      }
+      button:active {
+        box-shadow: 0 0 1px 1px black;
+      }
+      #content {
+        display: none;
+        background-color: #e87910;
+        width: 200px;
+        height: 100px;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+        top: 105px;
+        border-radius: 16px;
+        padding: 10px;
+        box-shadow: 5px 5px 1px black;
+        box-sizing: border-box;
+      }
+      p {
+        font-size: 1.2rem;
+        color: white;
+        font-weight: bold;
+        position: relative;
+        top: 25%;
+        transform: translateY(-50%);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="content">
+      <p>don't forget to be grateful</p>
+    </div>
+    <div class="container">
+      <div class="btn-container">
+        <button id="showContent">Click Me</button>
+      </div>
+    </div>
+  </body>
+  <script>
+    document
+      .getElementById("showContent")
+      .addEventListener("click", function () {
+        const content = document.getElementById("content");
+        if (content.style.display == "none" || content.style.display == "") {
+          content.style.display = "block";
+        } else {
+          content.style.display = "none";
+        }
+      });
+  </script>
+</html>
